@@ -13,7 +13,7 @@ module.exports = {
                 interaction.reply(`Stats for **${player.username}**:\nWins: ${player.wins}\nLosses: ${player.losses}\nGames Played: ${player.wins + player.losses}\nWinrate: ${(player.wins / (player.wins + player.losses) * 100).toFixed(2)}%\nKills: ${player.kills}\nDeaths: ${player.deaths}\nAssists: ${player.assists}\nKA/D: ${((player.kills + player.assists) / player.deaths).toFixed(2)}`);
                 return;
             } else {
-                interaction.reply(`Player ${interaction.options.getString('username')} not found.`);
+                interaction.reply(`Player **${interaction.options.getString('username')}** not found.`);
             }
         });
     }
